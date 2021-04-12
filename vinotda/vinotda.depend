@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1618083268 source:e:\c++\vinotda\main.cpp
+	<iostream>
+	"vino.h"
+
+1618085759 e:\c++\vinotda\vino.h
+	<iostream>
+
