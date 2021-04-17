@@ -1,14 +1,26 @@
 # depslib dependency file v1.0
-1618086058 source:e:\c++\vinotda\main.cpp
+1618652805 source:e:\c++\vinotda\main.cpp
 	<iostream>
+	<string.h>
 	"vino.h"
 	"vino.c"
+	"lista.h"
+	"lista.c"
 
-1618085759 e:\c++\vinotda\vino.h
+1618647020 e:\c++\vinotda\vino.h
 	<iostream>
 
-1618202856 e:\c++\vinotda\vino.c
+1618647020 e:\c++\vinotda\vino.c
 	"vino.h"
 	<iostream>
 	<string.h>
+
+1618613074 e:\c++\vinotda\lista.h
+	"vino.h"
+
+1618652735 e:\c++\vinotda\lista.c
+	"vino.h"
+	<iostream>
+	<string.h>
+	"lista.h"
 
