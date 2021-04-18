@@ -14,5 +14,6 @@ typedef struct Lista *LISTA;
 LISTA CrearLista();
 struct Nodo* CrearNodo(VINO vino);
 void EliminarNodo(struct Nodo*nodo);
+void obtenerElemento(LISTA lista,VINO *vino, int pos);
 
 #endif // LISTA_H_INCLUDED

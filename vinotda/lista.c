@@ -27,8 +27,6 @@ nodo->siguiente=lista->cabeza;
 lista->cabeza=nodo;
 lista->tam++;
 }
-
-
 void obtenerElemento(LISTA lista,VINO *vino, int pos){
 int i;
 
@@ -59,7 +57,6 @@ else{
 }
 
 }
-
 void EliminarInicio(LISTA lista){
 if(lista->cabeza){
     struct Nodo* eliminado=lista->cabeza;
