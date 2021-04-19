@@ -2,6 +2,7 @@
 #include <iostream>
 #include<string.h>
 #include "lista.h"
+#include<stdbool.h>
 struct Nodo* CrearNodo(VINO vino){
 struct Nodo* nodo= new Nodo;
 
@@ -58,14 +59,19 @@ else{
 
 }
 void EliminarInicio(LISTA lista){
-if(lista->cabeza){
+    if(lista->cabeza){
     struct Nodo* eliminado=lista->cabeza;
     lista->cabeza=lista->cabeza->siguiente;
     EliminarNodo(eliminado);
     lista->tam--;
+    }
 }
+bool EstaVacia(LISTA lista) {
+    if(lista->cabeza== NULL){
+    return true;
+    }
+    return false;
 }
-
 
 
 

@@ -59,7 +59,7 @@ char *GetTerroirVino(VINO vino){
 return vino->terroir;
 }
 void MostrarVino(VINO vino){
-cout<<"ID: "<<GetIDVino(vino)<<endl;
+cout<<"ID Vino: "<<GetIDVino(vino)<<endl;
 cout<<" Etiqueta: "<<GetEtiquetaVino(vino)<<endl;
 cout<<"Bodega: "<<GetBodegaVino(vino)<<endl;
 cout<<"Segmento: "<<GetSegmentoVino(vino)<<endl;
