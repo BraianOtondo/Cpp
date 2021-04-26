@@ -4,12 +4,12 @@
 #include "lista.h"
 #include"usuario.h"
 using namespace std;
-USUARIO CrearUsuario(int id,const char nombeyApellido[],const char direccion[],LISTA lista,int edadUsuario,const char nacionalidad[]){
+USUARIO CrearUsuario(int id,const char nombeyApellido[],const char direccion[],int edadUsuario,const char nacionalidad[]){
 USUARIO usuario = new StructUsuario;
 SetIDUsuario(usuario,id);
 SetNombreYApellido(usuario,nombeyApellido);
 SetDireccionUsuario(usuario,direccion);
-SetListaUsuario(usuario,lista);
+usuario->lista=CrearLista();
 SetEdadUsuario(usuario,edadUsuario);
 SetNacionalidadUsuario(usuario,nacionalidad);
 return usuario;

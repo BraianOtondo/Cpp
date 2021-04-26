@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1619444912 source:e:\c++\tpdiagnostico\main.cpp
+	<iostream>
+	"sucursal.h"
+
+1619436565 e:\c++\tpdiagnostico\sucursal.h
+
+1619439778 source:e:\c++\tpdiagnostico\sucursal.cpp
+	<stdlib.h>
+	<iostream>
+	"sucursal.h"
+	<string.h>
+
