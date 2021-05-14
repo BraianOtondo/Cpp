@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1620055125 source:e:\c++\poo\desturctor\main.cpp
+	<iostream>
+	<stdlib.h>
+
