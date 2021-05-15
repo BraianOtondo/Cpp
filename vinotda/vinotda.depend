@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1619298614 source:e:\c++\vinotda\main.cpp
+1621027598 source:e:\c++\vinotda\main.cpp
 	<iostream>
 	<string.h>
 	"vino.h"
@@ -27,10 +27,10 @@
 	"lista.h"
 	<stdbool.h>
 
-1618781199 e:\c++\vinotda\usuario.h
+1621027045 e:\c++\vinotda\usuario.h
 	<iostream>
 
-1619298310 e:\c++\vinotda\usuario.c
+1621027680 e:\c++\vinotda\usuario.c
 	"vino.h"
 	<iostream>
 	<string.h>

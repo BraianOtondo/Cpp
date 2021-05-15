@@ -21,7 +21,7 @@ void SetIDUsuario(USUARIO usuario,int id){
 usuario->id=id;
 }
 void SetNombreYApellido(USUARIO usuario,const char nombreYApellido[]){
-strcpy(usuario->nombeyApellido,nombreYApellido);
+strcpy(usuario->nombreyApellido,nombreYApellido);
 }
 void SetDireccionUsuario(USUARIO usuario,const char direccion[]){
 strcpy(usuario->direccion,direccion);
@@ -36,10 +36,10 @@ void SetNacionalidadUsuario(USUARIO usuario,const char nacionalidad[]){
 strcpy(usuario->nacionalidad,nacionalidad);
 }
 int GetIDUsuario(USUARIO usuario){
-return usuario->edadUsuario;
+return usuario->id;
 }
 char *GetNombreYApellidoUsuario(USUARIO usuario){
-return usuario->nombeyApellido;
+return usuario->nombreyApellido;
 }
 char *GetDireccionUsuario(USUARIO usuario){
 return usuario->direccion;
@@ -56,8 +56,12 @@ return usuario->nacionalidad;
 void MostrarUsuario(USUARIO usuario){
 cout<<"ID: "<<GetIDUsuario(usuario)<<endl;
 cout<<"Nombre y Apellido: "<<GetNombreYApellidoUsuario(usuario)<<endl;
-cout<<"LISTA: "<<endl;
-ImprimirLista(GetListaUsuario(usuario));
 cout<<"Edad de Usuario: "<<GetEdadUsuario(usuario)<<endl;
 cout<<"Nacionalidad: "<<GetNacionalidadUsuario(usuario)<<endl;
+cout<<"Direccion: "<<GetDireccionUsuario(usuario)<<endl;
+cout<<"**************LISTA:**************"<<endl;
+ImprimirLista(GetListaUsuario(usuario));
+}
+void InsertarVinoEnUsuario(USUARIO usuario,VINO vino){
+InsertarInicio(usuario->lista,vino);
 }

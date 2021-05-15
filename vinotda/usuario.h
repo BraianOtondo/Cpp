@@ -3,14 +3,14 @@
 #include <iostream>
 struct StructUsuario{
 int id;
-char nombeyApellido[20];
+char nombreyApellido[20];
 char direccion[50];
 LISTA lista;// Lista de vinos seleccionada (id de vino):	Lista de Números
 int edadUsuario;
 char nacionalidad[10];
 };
 typedef struct StructUsuario *USUARIO;
-USUARIO CrearUsuario(int id,const char nombeyApellido[],const char direccion[],LISTA lista,int edadUsuario,const char nacionalidad[]);
+USUARIO CrearUsuario(int id,const char nombreyApellido[],const char direccion[],LISTA lista,int edadUsuario,const char nacionalidad[]);
 void EliminarUsuario(USUARIO usuario);
 void SetIDUsuario(USUARIO usuario,int id);
 void SetNombreYApellido(USUARIO usuario,const char nombreYApellido[]);
@@ -25,5 +25,5 @@ LISTA GetListaUsuario(USUARIO usuario);
 int GetEdadUsuario(USUARIO usuario);
 char *GetNacionalidadUsuario(USUARIO usuario);
 void MostrarUsuario(USUARIO usuario);
-
+void InsertarVinoEnUsuario(USUARIO usuario,VINO vino);
 #endif // USUARIO_H_INCLUDED
