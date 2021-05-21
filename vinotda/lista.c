@@ -72,7 +72,6 @@ bool EstaVacia(LISTA lista) {
     }
     return false;
 }
-//LiberarLista (remueve los elementos de la lista)
 int ObtenerTamanio(LISTA lista){
 return lista->tam;
 }
@@ -89,16 +88,21 @@ puntero->siguiente=nodo;
 lista->tam++;
 }
 }
+//LiberarLista (remueve los elementos de la lista)
 
-
-/*void Insertar(Lista* lista,LIBRO libro,int pos){
+void Insertar(LISTA lista,VINO vino,int pos){
 int i;
-if(lista==NULL){
-    cout<<"Esta lista no esta inicializada"<<endl;
-}
 if(pos<0||pos>lista->tam){
-return INDICE_INVALIDO;
+cout<<"Indice invalido"<<endl;
+}else if(EstaVacia(lista)){
+        InsertarInicio(lista,vino);
+    }else{
+
+    }
+
+
 }
+
 Nodo* nuevonodo;
 if(pos==0){
     return InsertarPrincipio(lista,libro);
@@ -119,4 +123,4 @@ else{
 lista->tam++;
 return OK;
 }
-*/
+
