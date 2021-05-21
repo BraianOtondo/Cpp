@@ -72,7 +72,23 @@ bool EstaVacia(LISTA lista) {
     }
     return false;
 }
-
+//LiberarLista (remueve los elementos de la lista)
+int ObtenerTamanio(LISTA lista){
+return lista->tam;
+}
+void InsertarFinal(LISTA lista,VINO vino){
+if(EstaVacia(lista)){
+    InsertarInicio(lista,vino);
+}else{
+struct Nodo* nodo=CrearNodo(vino);
+struct Nodo* puntero=lista->cabeza;
+    while(puntero->siguiente){
+    puntero=puntero->siguiente;
+    }
+puntero->siguiente=nodo;
+lista->tam++;
+}
+}
 
 
 /*void Insertar(Lista* lista,LIBRO libro,int pos){

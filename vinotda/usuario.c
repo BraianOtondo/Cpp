@@ -65,3 +65,4 @@ ImprimirLista(GetListaUsuario(usuario));
 void InsertarVinoEnUsuario(USUARIO usuario,VINO vino){
 InsertarInicio(usuario->lista,vino);
 }
+//void QuitarVinoEnUsuario(USUARIO usuario,VI)
