@@ -17,4 +17,7 @@ void EliminarNodo(struct Nodo*nodo);
 void obtenerElemento(LISTA lista,VINO *vino, int pos);
 bool EstaVacia(LISTA lista);
 void InsertarFinal(LISTA lista,VINO vino);
+void EliminarInicio(LISTA lista);
+void LiberarLista(LISTA lista);
+void EliminarUltimo(LISTA lista);
 #endif // LISTA_H_INCLUDED

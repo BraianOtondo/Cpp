@@ -11,40 +11,31 @@ using namespace std;
 
 int main(){
 USUARIO usuario;
-VINO vino,vino2;
+VINO vino,vino2,vino3,vino5,vino6;
 usuario=CrearUsuario(1054,"Jose Martinez","San Martin 549",20,"Argentina");
 vino=CrearVino(10,"eti","bode","seg","var",2,"terr");
 vino2=CrearVino(20,"eti","bode","seg","var",2,"terr");
-//InsertarVinoEnUsuario(usuario,vino);
-//InsertarVinoEnUsuario(usuario,vino2);
-//InsertarInicio(usuario->lista,vino);
-//InsertarInicio(usuario->lista,vino2);
+vino3=CrearVino(40,"eti","bode","seg","var",2,"terr");
+vino5=CrearVino(50,"eti","bode","seg","var",2,"terr");
+vino6=CrearVino(60,"eti","bode","seg","var",2,"terr");
+
 InsertarFinal(usuario->lista,vino);
 InsertarFinal(usuario->lista,vino2);
+InsertarFinal(usuario->lista,vino3);
+InsertarFinal(usuario->lista,vino5);
+InsertarFinal(usuario->lista,vino6);
+cout<<"!!!!!!!!!!!!!!"<<endl;
+//VINO vino4;
+//vino4=CrearVino(30,"eti","bode","seg","var",2,"terr");
+//Insertar(usuario->lista,vino4,5);
 //MostrarUsuario(usuario);
+//LISTA lista;
 ImprimirLista(usuario->lista);
-delete usuario;
-delete vino;
-delete vino2;
-/*EliminarInicio(usuario->lista);
+//EliminarUltimo(usuario->lista);
+LiberarLista(usuario->lista);
+cout<<"dsaADSA"<<endl;
 
-cout<<"La lista esta: "<<endl;
-if(EstaVacia(usuario->lista)==true){
-    cout<<"VACIA"<<endl;
-}else{
-cout<<"CON DATOS"<<endl;
-}
+ImprimirLista(usuario->lista);
 
-EliminarInicio(usuario->lista);
-cout<<"La lista esta: "<<endl;
-if(EstaVacia(usuario->lista)==true){
-    cout<<"VACIA"<<endl;
-}else{
-cout<<"CON DATOS"<<endl;
-}
-//ImprimirLista(lista);
-//EliminarInicio(lista);
-//cout<<"XD "<<endl;
-//ImprimirLista(lista);
-    return 0;*/
+return 0;
 }

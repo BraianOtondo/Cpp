@@ -39,9 +39,16 @@ int i;
     *vino = aux->vino;
 
 }
+bool EstaVacia(LISTA lista) {
+    if(lista->cabeza== NULL){
+    return true;
+    }
+    return false;
+}
 void ImprimirLista(LISTA lista){
 int tam,i;
-if(lista!=NULL){
+
+if(!EstaVacia(lista)){
 tam=lista->tam;
    for(i=0;i<tam;i++){
         VINO vino;
@@ -51,10 +58,8 @@ tam=lista->tam;
 
    } //Mientras cabeza no sea NULL
 
-
-}
-else{
-    printf("No existe la lista\n");
+}else{
+cout<<"LA LISTA ESTA VACIA"<<endl;
 }
 
 }
@@ -65,12 +70,6 @@ void EliminarInicio(LISTA lista){
     EliminarNodo(eliminado);
     lista->tam--;
     }
-}
-bool EstaVacia(LISTA lista) {
-    if(lista->cabeza== NULL){
-    return true;
-    }
-    return false;
 }
 int ObtenerTamanio(LISTA lista){
 return lista->tam;
@@ -92,35 +91,51 @@ lista->tam++;
 
 void Insertar(LISTA lista,VINO vino,int pos){
 int i;
-if(pos<0||pos>lista->tam){
-cout<<"Indice invalido"<<endl;
-}else if(EstaVacia(lista)){
-        InsertarInicio(lista,vino);
-    }else{
+if(pos<0||pos>lista->tam)
+    cout<<"Indice invalido"<<endl;
 
-    }
-
-
-}
-
-Nodo* nuevonodo;
+if(EstaVacia(lista))
+    cout<<"La lista esta vacia"<<endl;
 if(pos==0){
-    return InsertarPrincipio(lista,libro);
-}
-else{
-    Nodo *aux;
-    aux=lista->cabeza;
+    InsertarInicio(lista,vino);
+}else{
+    struct Nodo* nodo=CrearNodo(vino);
+    struct Nodo* aux=lista->cabeza;
     for(i=0;i<pos-1;i++){
-    aux=aux->siguiente;//
+        aux=aux->siguiente;
     }
-    nuevonodo=CrearNodo(libro);//
-    nuevonodo->siguiente=aux->siguiente;
-    if(nuevonodo==NULL){
-        return ESTRUCTURA_NO_INICIALIZADA;
-    }
-    aux->siguiente=nuevonodo;//
+    nodo->siguiente=aux->siguiente;
+    aux->siguiente=nodo;
+
 }
 lista->tam++;
-return OK;
+
+}
+void LiberarLista(LISTA lista){
+while(lista->cabeza!=nullptr){
+EliminarUltimo(lista);
+}
+lista=NULL;
+}
+void EliminarUltimo(LISTA lista){
+if(!EstaVacia(lista)){
+    if(lista->cabeza->siguiente){
+    Nodo* puntero=lista->cabeza;
+        while(puntero->siguiente->siguiente){
+        puntero=puntero->siguiente;
+        }
+        Nodo*eliminado=puntero->siguiente;
+        puntero->siguiente=nullptr;
+        EliminarNodo(eliminado);
+        lista->tam--;
+        }else{
+            Nodo* eliminado=lista->cabeza;
+            lista->cabeza=nullptr;
+            EliminarNodo(eliminado);
+            lista->tam--;
+        }
+
+}
+
 }
 
