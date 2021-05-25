@@ -32,7 +32,7 @@ cout<<"!!!!!!!!!!!!!!"<<endl;
 //LISTA lista;
 ImprimirLista(usuario->lista);
 //EliminarUltimo(usuario->lista);
-LiberarLista(usuario->lista);
+Eliminar(usuario->lista,4);
 cout<<"dsaADSA"<<endl;
 
 ImprimirLista(usuario->lista);

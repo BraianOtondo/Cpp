@@ -139,3 +139,28 @@ if(!EstaVacia(lista)){
 
 }
 
+void Eliminar(LISTA lista, int pos){
+if(pos<0||pos>=lista->tam){
+  cout<<"Indice invalido"<<endl;
+}
+
+if(!EstaVacia(lista)){
+     Nodo *ant,*actual;
+    if (pos==0) {
+    EliminarInicio(lista);
+    } else {
+        // prepara para remover
+        ant=NULL;
+        actual = lista->cabeza;
+        for(int i=0;i<pos;i++) {
+            ant = actual;
+            actual = actual->siguiente;
+        }
+
+        ant->siguiente = actual->siguiente;
+        delete(actual);
+        actual = NULL;
+    }
+    lista->tam--;
+}
+}

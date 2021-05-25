@@ -20,4 +20,5 @@ void InsertarFinal(LISTA lista,VINO vino);
 void EliminarInicio(LISTA lista);
 void LiberarLista(LISTA lista);
 void EliminarUltimo(LISTA lista);
+void Eliminar(LISTA lista, int pos);
 #endif // LISTA_H_INCLUDED
