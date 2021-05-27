@@ -1,42 +1,39 @@
-#include "vino.h"
-#include <iostream>
-#include<string.h>
 #include "lista.h"
-#include<stdbool.h>
-struct Nodo* CrearNodo(VINO vino){
-struct Nodo* nodo= new Nodo;
+using namespace std;
+LISTA CrearLista(){
+LISTA lista = new Lista;
+    if (lista == NULL){
+    return NULL;
+    }
+lista->cabeza= NULL;
+lista->tam= 0;
+return lista;
+}
+NODO *CrearNodo(int dato){
+NODO *nodo= new Nodo;
 
-nodo->vino=vino;
+nodo->dato=dato;
 nodo->siguiente=NULL;
 return nodo;
-}
-LISTA CrearLista(){
-    LISTA lista = new Lista;
-    if (lista == NULL){
-      return NULL;
-    }
-    lista->cabeza= NULL;
-    lista->tam= 0;
-    return lista;
 }
 void EliminarNodo(struct Nodo*nodo){
 delete(nodo);
 }
-void InsertarInicio(LISTA lista,VINO vino){
-struct Nodo* nodo=CrearNodo(vino);
-nodo->siguiente=lista->cabeza;
-lista->cabeza=nodo;
+void InsertarInicio(LISTA lista,int dato){
+NODO *nodo=CrearNodo(dato);
+nodo->siguiente=lista->cabeza; // nodo apunta a la cabeza
+lista->cabeza=nodo;// lista-> cabeza ahora es nodo
 lista->tam++;
 }
-void obtenerElemento(LISTA lista,VINO *vino, int pos){
+void ObtenerElemento(LISTA lista,int *dato, int pos){
 int i;
 
-    struct Nodo *aux;
+    NODO *aux;
     aux=lista->cabeza;
     for(i=0; i < pos; i++) {
         aux = aux->siguiente;
     }
-    *vino = aux->vino;
+    *dato = aux->dato;
 
 }
 bool EstaVacia(LISTA lista) {
@@ -48,15 +45,16 @@ bool EstaVacia(LISTA lista) {
 void ImprimirLista(LISTA lista){
 int tam,i;
 
-if(!EstaVacia(lista)){
+if(EstaVacia(lista)==false){
 tam=lista->tam;
    for(i=0;i<tam;i++){
-        VINO vino;
-        obtenerElemento(lista,&vino,i);
-  MostrarVino(vino);
-  cout<<"----------------------------"<<endl;
+        int dato;
+        ObtenerElemento(lista,&dato,i);
+    cout<<dato;
+  cout<<"- ";
 
-   } //Mientras cabeza no sea NULL
+   }
+   cout<<endl; //Mientras cabeza no sea NULL
 
 }else{
 cout<<"LA LISTA ESTA VACIA"<<endl;
@@ -74,31 +72,29 @@ void EliminarInicio(LISTA lista){
 int ObtenerTamanio(LISTA lista){
 return lista->tam;
 }
-void InsertarFinal(LISTA lista,VINO vino){
-if(EstaVacia(lista)){
-    InsertarInicio(lista,vino);
-}else{
-struct Nodo* nodo=CrearNodo(vino);
-struct Nodo* puntero=lista->cabeza;
-    while(puntero->siguiente){
-    puntero=puntero->siguiente;
+void InsertarFinal(LISTA lista,int dato){
+    if(EstaVacia(lista)){
+    InsertarInicio(lista,dato);
+    }else{
+    NODO *nodo=CrearNodo(dato);
+    NODO *puntero=lista->cabeza; //*puntero tiene la cabeza si cambia esta variable cambia cabeza por el * y el =
+        while(puntero->siguiente){ //Mientras puntero tenga siguiente, si tiene null entonces sale del bucle
+        puntero=puntero->siguiente;//solo esta recorriendo, no esta asignando, cuando encuentra el puntero con null se detiene
+        }
+    puntero->siguiente=nodo;// ahora cuando encontro el puntero que tiene null, le asigna su siguiente el nodo creado
+    lista->tam++;
     }
-puntero->siguiente=nodo;
-lista->tam++;
-}
 }
 //LiberarLista (remueve los elementos de la lista)
-void Insertar(LISTA lista,VINO vino,int pos){
+void Insertar(LISTA lista,int dato,int pos){
 int i;
-if(pos<0||pos>lista->tam)
-    cout<<"Indice invalido"<<endl;
-
-if(EstaVacia(lista))
-    cout<<"La lista esta vacia"<<endl;
+if(pos<0||pos>lista->tam){
+cout<<"Indice invalido"<<endl;
+}
 if(pos==0){
-    InsertarInicio(lista,vino);
+    InsertarInicio(lista,dato);
 }else{
-    struct Nodo* nodo=CrearNodo(vino);
+    struct Nodo* nodo=CrearNodo(dato);
     struct Nodo* aux=lista->cabeza;
     for(i=0;i<pos-1;i++){
         aux=aux->siguiente;
@@ -162,4 +158,3 @@ if(!EstaVacia(lista)){
     lista->tam--;
 }
 }
-

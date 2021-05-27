@@ -5,7 +5,6 @@ struct Nodo{
 VINO vino;
 struct Nodo *siguiente;
 };
-
 struct Lista{
 Nodo *cabeza;
 int tam;
