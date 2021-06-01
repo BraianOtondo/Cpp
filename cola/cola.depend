@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1622551405 source:e:\c++\cola\cola.cpp
+	"cola.h"
+
+1622551671 e:\c++\cola\cola.h
+	<iostream>
+	<stdbool.h>
+
+1622551908 source:e:\c++\cola\main.cpp
+	<iostream>
+	"cola.h"
+

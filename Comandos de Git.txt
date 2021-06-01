@@ -1,0 +1,13 @@
+$git init      // crea un repositorio
+$git status // muestra el estado del repositorio
+$git branch -a //muestra todas las ramas
+$git branch -d (nombre-rama) // elimina la rama local
+$git remote show origin
+$cd  /d/Python/  // accede a una carpeta
+$
+$
+$
+$
+$
+$
+PyInstaller 
