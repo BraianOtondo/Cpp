@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1622555904 source:e:\c++\listadoble\lista.cpp
+	"lista.h"
+
+1622555904 e:\c++\listadoble\lista.h
+	<iostream>
+
+1622555904 source:e:\c++\listadoble\main.cpp
+	<iostream>
+	"lista.h"
+
