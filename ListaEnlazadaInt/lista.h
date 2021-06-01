@@ -26,5 +26,5 @@ void EliminarUltimo(LISTA lista);
 void Eliminar(LISTA lista, int pos);
 void ImprimirLista(LISTA lista);
 void InsertarInicio(LISTA lista,int dato);
-
+void INsertar(LISTA lista,int dato,int pos);
 #endif // LISTA_H_INCLUDED

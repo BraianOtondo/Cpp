@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1622506802 source:e:\c++\pilaint\pila.cpp
+	"pila.h"
+
+1622506922 source:e:\c++\pilaint\main.cpp
+	<iostream>
+	"pila.h"
+
+1622506943 e:\c++\pilaint\pila.h
+	<iostream>
+	<stdbool.h>
+

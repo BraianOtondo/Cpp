@@ -6,18 +6,12 @@ using namespace std;
 int main(){
 LISTA lista;
 lista=CrearLista();
-int num;
-cout<<"Ingrese numero: "<<endl;
- cin >>num;
-while(num!=0){
-InsertarFinal(lista,num);
-cout<<"Ingrese numero: "<<endl;
- cin >>num;
-}
+INsertar(lista,4,0);
+INsertar(lista,5,1);
+ImprimirLista(lista);
+//INsertar(lista,3,2);
+Eliminar(lista,1);
 ImprimirLista(lista);
 LiberarLista(lista);
-ImprimirLista(lista);
-
-
     return 0;
 }

@@ -101,9 +101,32 @@ if(pos==0){
     }
     nodo->siguiente=aux->siguiente;
     aux->siguiente=nodo;
+    lista->tam++;
+}
+
 
 }
-lista->tam++;
+void INsertar(LISTA lista,int dato,int pos){
+    if(pos<0||pos>lista->tam){
+    cout<<"Indice invalido"<<endl;
+    }else{
+        if(EstaVacia(lista)||(pos==0)){
+        InsertarInicio(lista,dato);
+        }else{
+        int i;
+        NODO* nodo=CrearNodo(dato);
+        NODO* puntero=lista->cabeza;
+        i=0;
+            while((i<pos-1)){
+            puntero=puntero->siguiente;
+            i++;
+            }
+        nodo->siguiente=puntero->siguiente;
+        puntero->siguiente=nodo;
+        lista->tam++;
+        }
+    }
+
 
 }
 void LiberarLista(LISTA lista){
@@ -136,25 +159,22 @@ if(!EstaVacia(lista)){
 void Eliminar(LISTA lista, int pos){
 if(pos<0||pos>=lista->tam){
   cout<<"Indice invalido"<<endl;
-}
-
-if(!EstaVacia(lista)){
-     Nodo *ant,*actual;
-    if (pos==0) {
-    EliminarInicio(lista);
-    } else {
-        // prepara para remover
-        ant=NULL;
-        actual = lista->cabeza;
-        for(int i=0;i<pos;i++) {
-            ant = actual;
-            actual = actual->siguiente;
+}else{
+    if(!EstaVacia(lista)){
+        if(pos==0){
+        EliminarInicio(lista);
+        }else{
+        NODO *puntero=lista->cabeza;
+            for(int i=0;i<pos-1;i++) {
+            puntero=puntero->siguiente;
+            }
+        NODO *eliminado=puntero->siguiente;
+        puntero->siguiente=eliminado->siguiente;
+        EliminarNodo(eliminado);
+        lista->tam--;
         }
 
-        ant->siguiente = actual->siguiente;
-        delete(actual);
-        actual = NULL;
     }
-    lista->tam--;
-}
+
+    }
 }
