@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1622584911 source:e:\c++\listaexamen\main.cpp
+	<cstdlib>
+	<iostream>
+

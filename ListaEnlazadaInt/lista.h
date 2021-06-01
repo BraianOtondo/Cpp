@@ -27,4 +27,5 @@ void Eliminar(LISTA lista, int pos);
 void ImprimirLista(LISTA lista);
 void InsertarInicio(LISTA lista,int dato);
 void INsertar(LISTA lista,int dato,int pos);
+void CopiarLista(LISTA lista1,LISTA lista2);
 #endif // LISTA_H_INCLUDED

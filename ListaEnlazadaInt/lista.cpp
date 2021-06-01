@@ -178,3 +178,15 @@ if(pos<0||pos>=lista->tam){
 
     }
 }
+void CopiarLista(LISTA lista1,LISTA lista2){
+int i,tam;
+i=0;
+tam=lista1->tam;
+int dato;
+while(i<tam){
+
+ObtenerElemento(lista1,&dato,i);
+InsertarFinal(lista2,dato);
+i++;
+}
+}

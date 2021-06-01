@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1622430091 source:e:\c++\listaenlazadaint\main.cpp
+1622583082 source:e:\c++\listaenlazadaint\main.cpp
 	<iostream>
 	"lista.h"
 
-1622297454 e:\c++\listaenlazadaint\lista.h
+1622582877 e:\c++\listaenlazadaint\lista.h
 	<iostream>
 	<stdbool.h>
 	<string.h>
 
-1622430072 source:e:\c++\listaenlazadaint\lista.cpp
+1622583169 source:e:\c++\listaenlazadaint\lista.cpp
 	"lista.h"
 
