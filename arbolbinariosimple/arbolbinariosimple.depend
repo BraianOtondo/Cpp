@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1623796043 source:e:\c++\arbolbinariosimple\main.cpp
+	<iostream>
+	"arbol.h"
+
+1623759147 source:e:\c++\arbolbinariosimple\arbol.cpp
+	"arbol.h"
+
+1623759231 e:\c++\arbolbinariosimple\arbol.h
+	<iostream>
+	<stdbool.h>
+
